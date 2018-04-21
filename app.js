@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/do', (req, res) => {
+    res.render('main');
+});
+
 
 app.listen(8080, function() {
     console.log("Serving!");
