@@ -4,15 +4,15 @@
 <h3>Your ToDo's waiting!</h3>
 <% todo.forEach(function(reTodo) { %>
     <div id="display">
-    <p><%= reTodo.todo %></p>
-    <form style="display:inline!important;" action="/delete" method="POST">
-        <input type="hidden" name="id" value="<%= reTodo._id %>">
-        <input style="border-radius: 9px;
-        width: 60px;
-        height: 20px;
-        background: white;
-        font-weight: bold;" type="submit" value="Done">
-    </form>
+        <p><%= reTodo.todo %></p>
+        <form style="display:inline!important; margin-left: 10px;" action="/delete" method="POST">
+            <input type="hidden" name="id" value="<%= reTodo._id %>">
+            <input style="border-radius: 9px;
+            width: 60px;
+            height: 20px;
+            background: white;
+            font-weight: bold;" type="submit" value="Done">
+        </form>
     </div>
 <% }); %>
 <a href="/new"><button>Add new</button></a>
